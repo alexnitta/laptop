@@ -49,11 +49,11 @@ $ env RCRC=/dev/null rcup -B 0 -g > install.sh
 
 Now `~/.dotfiles` folder is a nice bundle of the dotfiles we care about for development purposes that contains its own install script.
 
-## Running the setup script
+## Running the mac.sh script
 
-Now that you've got the `~/.dotfiles` folder set up, you can execute the setup script. The setup script and the rest of this README are largely copied from [https://github.com/thoughtbot/laptop](https://github.com/thoughtbot/laptop).
+Now that you've got the `~/.dotfiles` folder set up, you can execute the setup script at `mac.sh`. This script and the rest of this README are largely copied from [https://github.com/thoughtbot/laptop](https://github.com/thoughtbot/laptop).
 
-## Install
+### Install
 
 Download the script:
 
