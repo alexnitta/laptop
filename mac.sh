@@ -80,23 +80,13 @@ brew "git"
 brew "openssl"
 brew "rcm"
 brew "bash"
-brew "rsync"
-brew "tree"
 
 # GitHub
 brew "gh"
 
-# Image manipulation
-brew "svgo"
-
 # Programming language prerequisites and package managers
 brew "libyaml" # should come after openssl
 brew "coreutils"
-brew "yarn"
-cask "gpg-suite-no-mail"
-
-# Productivity
-brew install --cask fig
 
 EOF
 
@@ -136,8 +126,8 @@ install_asdf_language() {
 fancy_echo "Installing latest Node ..."
 install_asdf_language "nodejs"
 
-if [ -f "$HOME/.laptop.local" ]; then
-  fancy_echo "Running your customizations from ~/.laptop.local ..."
+if [ -f ".laptop.local" ]; then
+  fancy_echo "Running your customizations from .laptop.local ..."
   # shellcheck disable=SC1090
-  . "$HOME/.laptop.local"
+  . ".laptop.local"
 fi

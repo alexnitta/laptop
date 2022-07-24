@@ -1,0 +1,62 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && . "$HOME/.fig/shell/bash_profile.pre.bash"
+# ~/.bash_profile
+
+[[ -s ~/.bashrc ]] && source ~/.bashrc
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Aliases
+
+# Use curl as a substitute for wget
+alias wget="curl -O"
+# Like using just 'ls', but with prettier output
+alias ls='ls -GFh'
+# List files only in current folder
+alias ll='ls -l'
+# Show numeric file permissions for current folder
+alias statperms="stat -f '%A %N' *"
+# Show npm links within current folder
+alias findnpmlinks='find node_modules -maxdepth 2 -type l -ls'
+# Show npm links in global NVM folder
+alias findnpmlinksglobal='ls -ln ~/.nvm/versions/node/v8.12.0/lib/node_modules'
+# Wipe out node_modules and install from scratch
+alias nuke='rm -rf node_modules && npm i'
+
+function prompt {
+  local BLACK="\[\033[0;30m\]"
+  local BLACKBOLD="\[\033[1;30m\]"
+  local RED="\[\033[0;31m\]"
+  local REDBOLD="\[\033[1;31m\]"
+  local GREEN="\[\033[0;32m\]"
+  local GREENBOLD="\[\033[1;32m\]"
+  local YELLOW="\[\033[0;33m\]"
+  local YELLOWBOLD="\[\033[1;33m\]"
+  local BLUE="\[\033[0;34m\]"
+  local BLUEBOLD="\[\033[1;34m\]"
+  local PURPLE="\[\033[0;35m\]"
+  local PURPLEBOLD="\[\033[1;35m\]"
+  local CYAN="\[\033[0;36m\]"
+  local CYANBOLD="\[\033[1;36m\]"
+  local WHITE="\[\033[0;37m\]"
+  local WHITEBOLD="\[\033[1;37m\]"
+  local RESETCOLOR="\[\e[00m\]"
+
+  export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null)\n $BLUE[\#] → $RESETCOLOR"
+  export PS2=" | → $RESETCOLOR"
+}
+
+prompt
+
+source ~/.iterm2_shell_integration.`basename $SHELL`
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+export PATH="/usr/local/git/bin/git-credential-github-apps:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && . "$HOME/.fig/shell/bash_profile.post.bash"

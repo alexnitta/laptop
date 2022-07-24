@@ -1,0 +1,28 @@
+[user]
+  name = Alex Nitta
+  email = a.j.nitta@gmail.com
+	signingKey = 06CEFE3E7DD73D92
+[core]
+  autocrlf = false
+  safecrlf = true
+  editor = vim
+  autofrlf = input
+[alias]
+  co = checkout
+  c = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[push]
+  default = current
+[commit]
+	gpgsign = true
+[merge]
+	tool = extMerge
+[mergetool "extMerge"]
+	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = false
+[diff]
+	external = extDiff
