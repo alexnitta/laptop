@@ -69,9 +69,12 @@ Visual Studio Code has a [Settings Sync](https://code.visualstudio.com/docs/edit
 
 ### iTerm2
 
-You can tell iTerm where to load and save preferences to:
+You can tell iTerm where to load and save preferences to. To move your preferences to a new laptop, follow these steps on your old laptop first:
 
 1. Click the iTerm2 menu
 2. Select Preferences
 3. In the Preferences tab, check the box next to "Load preferences from a custom folder or URL" and set up the folder to be the `preferences` folder in this repo.
-4. Next to "Save changes", you have a few options for how / when to save the preferences.
+4. Next to "Save changes", you have a few options for how / when to save the preferences. You can select any of these options.
+5. Click Save Now to write the iTerm2 preferences file into this repo.
+
+When setting up your new laptop, tell iTerm to load the preferences from the `preferences` folder in this repo on the new machine, then close the dialog. You do not need to save the preferences at this point if you are prompted to.
