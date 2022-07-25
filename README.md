@@ -21,13 +21,13 @@ Fork and clone this repo, then `cd` into it.
 Review the script (avoid running scripts you haven't read!):
 
 ```sh
-less mac
+less mac.sh
 ```
 
 Execute the downloaded script:
 
 ```sh
-sh mac 2>&1 | tee ~/laptop.log
+sh mac.sh 2>&1 | tee ~/laptop.log
 ```
 
 Optionally, review the log:

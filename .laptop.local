@@ -1,9 +1,8 @@
 #!/bin/sh
 
-# Find apps and installation commands: https://brew.sh/
+# Find apps and brew install commands: https://brew.sh/
 
 # MacOS apps
-brew install --cask adobe-creative-cloud
 brew install --cask bitwarden
 brew install --cask docker
 brew install --cask dropbox

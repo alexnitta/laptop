@@ -45,8 +45,8 @@ if [ ! -f "$HOME/.bashrc" ]; then
   touch "$HOME/.bashrc"
 fi
 
-# # shellcheck disable=SC2016
-# append_to_bashrc 'export PATH="$HOME/.bin:$PATH"'
+# shellcheck disable=SC2016
+append_to_bashrc 'export PATH="$HOME/.bin:$PATH"'
 
 # Determine Homebrew prefix
 arch="$(uname -m)"
@@ -55,6 +55,29 @@ if [ "$arch" = "arm64" ]; then
 else
   HOMEBREW_PREFIX="/usr/local"
 fi
+
+update_shell() {
+  local shell_path;
+  shell_path="$(command -v bash)"
+
+  fancy_echo "Changing your shell to bash ..."
+  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    fancy_echo "Adding '$shell_path' to /etc/shells"
+    sudo sh -c "echo $shell_path >> /etc/shells"
+  fi
+  sudo chsh -s "$shell_path" "$USER"
+}
+
+case "$SHELL" in
+  */bash)
+    if [ "$(command -v bash)" != '/usr/local/bin/bash' ] ; then
+      update_shell
+    fi
+    ;;
+  *)
+    update_shell
+    ;;
+esac
 
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
@@ -125,6 +148,9 @@ install_asdf_language() {
 
 fancy_echo "Installing latest Node ..."
 install_asdf_language "nodejs"
+
+fancy_echo "Setting up dotfiles ..."
+env RCRC=$PWD/dotfiles/rcrc rcup
 
 if [ -f ".laptop.local" ]; then
   fancy_echo "Running your customizations from .laptop.local ..."

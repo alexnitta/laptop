@@ -1,7 +1,7 @@
 [user]
   name = Alex Nitta
-  email = a.j.nitta@gmail.com
-	signingKey = 06CEFE3E7DD73D92
+  email = alex@woodshed.tech
+	signingKey = E01C809B07434EF4
 [core]
   autocrlf = false
   safecrlf = true
