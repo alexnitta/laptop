@@ -49,7 +49,11 @@ function prompt {
 
 prompt
 
+# Add shell integration to iterm2
 source ~/.iterm2_shell_integration.`basename $SHELL`
+
+# Silence the MacOS warning that the default shell is zsh
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

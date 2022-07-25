@@ -49,7 +49,7 @@ Once you've run the `mac.sh` installation script, you will have `rcm` installed 
 Follow these steps to manage your dotfiles:
 
 1. Replace the files in the `dotfiles` folder with your own custom dotfiles. Remove leading `.`s in the filenames. However, don't remove `dotfiles/rcrc`. This is a configuration file for `rcrc`, which manages the configuration for `rcm`.
-2. Update `dotfiles/rcrc` by replacing `DOTFILES_DIRS` with the local path to your `dotfiles` folder in this repo.
+2. Update `dotfiles/rcrc` by updating `DOTFILES_DIRS="<path_to_dotfiles>"` with the local path to your `dotfiles` folder in this repo.
 3. Run this command: `env RCRC=/<path_to_this_repo_on_your_machine>/dotfiles/rcrc rcup`
 
 To see the list of dotfiles that are now symlinked to your home folder, run: `lsrc`. You'll see something like this:
@@ -63,4 +63,4 @@ To see the list of dotfiles that are now symlinked to your home folder, run: `ls
 
 You can verify this by `cd`ing to your home directory, then running `ls -la . | grep "\->"` to see only the symlinks.
 
-Any time you add a new dotfile in your local repo, you can run `rcup` to add a symlink for it. Push your changes up to GitHub, and now you have a reproducible dotfiles setup.
+Any time you add a new dotfile in your local repo, you can run `rcup` to add a symlink for it. Push your changes up to GitHub, and now you have a portable dotfiles setup.
