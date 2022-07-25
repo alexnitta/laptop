@@ -36,10 +36,6 @@ Optionally, review the log:
 less ~/laptop.log
 ```
 
-### VS Code
-
-I use Visual Studio Code as my IDE, and fortunately it has a [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) feature that helps when moving to a new machine.
-
 ## Dotfiles
 
 Dotfiles are configuration files for various tools, such as `.bash_profile` for the bash shell. Most likely, you've already made your own modifications to various dotfiles, and you will want to take these with you when setting up a new machine.
@@ -64,3 +60,18 @@ To see the list of dotfiles that are now symlinked to your home folder, run: `ls
 You can verify this by `cd`ing to your home directory, then running `ls -la . | grep "\->"` to see only the symlinks.
 
 Any time you add a new dotfile in your local repo, you can run `rcup` to add a symlink for it. Push your changes up to GitHub, and now you have a portable dotfiles setup.
+
+## App-specific notes
+
+### VS Code
+
+Visual Studio Code has a [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) feature that helps when moving to a new machine.
+
+### iTerm2
+
+You can tell iTerm where to load and save preferences to:
+
+1. Click the iTerm2 menu
+2. Select Preferences
+3. In the Preferences tab, check the box next to "Load preferences from a custom folder or URL" and set up the folder to be the `preferences` folder in this repo.
+4. Next to "Save changes", you have a few options for how / when to save the preferences.
