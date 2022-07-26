@@ -62,5 +62,8 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export PATH="/usr/local/git/bin/git-credential-github-apps:$PATH"
 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && . "$HOME/.fig/shell/bash_profile.post.bash"
+

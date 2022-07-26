@@ -26,3 +26,5 @@
 	trustExitCode = false
 [diff]
 	external = extDiff
+[pull]
+	ff = only

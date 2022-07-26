@@ -22,6 +22,7 @@ brew install --cask vlc
 brew install --cask zoom
 
 # Linux tools
+brew install act
 brew install svgo
 brew install rsync
 brew install tree
