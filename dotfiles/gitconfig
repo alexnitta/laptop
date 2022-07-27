@@ -19,12 +19,15 @@
   default = current
 [commit]
 	gpgsign = true
-[merge]
-	tool = extMerge
-[mergetool "extMerge"]
-	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-	trustExitCode = false
-[diff]
-	external = extDiff
 [pull]
-	ff = only
+	rebase = true
+[diff]
+	tool = p4merge
+[difftool]
+  prompt = false
+[merge]
+	tool = p4merge
+[mergetool]
+  prompt = false
+[mergetool "p4merge"]
+	path = /Applications/p4merge.app/Contents/Resources/launchp4merge
