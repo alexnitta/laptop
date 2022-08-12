@@ -2,12 +2,15 @@
 
 # Find apps and brew install commands: https://brew.sh/
 
+brew tap homebrew/cask-versions
+
 # MacOS apps
 brew install --cask bitwarden
 brew install --cask docker
 brew install --cask dropbox
 brew install --cask fig
 brew install --cask firefox
+brew install --cask firefox-developer-edition
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask gpg-suite-no-mail
