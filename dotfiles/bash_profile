@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && . "$HOME/.fig/shell/bash_profile.pre.bash"
+[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.pre.bash"
 # ~/.bash_profile
 
 [[ -s ~/.bashrc ]] && source ~/.bashrc
@@ -23,6 +23,8 @@ alias findnpmlinks='find node_modules -maxdepth 2 -type l -ls'
 alias findnpmlinksglobal='ls -ln ~/.nvm/versions/node/v8.12.0/lib/node_modules'
 # Wipe out node_modules and install from scratch
 alias nuke='rm -rf node_modules && npm i'
+# Use pnpm to execute Nx commands
+alias pnx="pnpm nx"
 
 function prompt {
   local BLACK="\[\033[0;30m\]"
@@ -55,9 +57,6 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 # Silence the MacOS warning that the default shell is zsh
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export PATH="/usr/local/git/bin/git-credential-github-apps:$PATH"
@@ -65,5 +64,5 @@ export PATH="/usr/local/git/bin/git-credential-github-apps:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && . "$HOME/.fig/shell/bash_profile.post.bash"
+[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"
 
