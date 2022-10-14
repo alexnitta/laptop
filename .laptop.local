@@ -3,6 +3,7 @@
 # Find apps and brew install commands: https://brew.sh/
 
 brew tap homebrew/cask-versions
+brew tap hashicorp/tap
 
 # MacOS apps
 brew install --cask bitwarden
@@ -29,6 +30,8 @@ brew install act
 brew install svgo
 brew install rsync
 brew install tree
+brew install flyctl
+brew install hashicorp/tap/terraform
 
 # Install shell integration for iterm2
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
