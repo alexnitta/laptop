@@ -9,5 +9,10 @@ export PNPM_HOME="/Users/alexnitta/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+# volta
+export VOLTA_HOME="/Users/alexnitta/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+# volta end
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.post.bash"

@@ -36,3 +36,6 @@ brew install hashicorp/tap/terraform
 # Install shell integration for iterm2
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 source ~/.iterm2_shell_integration.`basename $SHELL`
+
+# Install Volta to manage NodeJS versions
+curl https://get.volta.sh | bash
