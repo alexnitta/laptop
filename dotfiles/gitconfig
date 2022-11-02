@@ -31,3 +31,5 @@
   prompt = false
 [mergetool "p4merge"]
 	path = /Applications/p4merge.app/Contents/Resources/launchp4merge
+[init]
+	defaultBranch = main
