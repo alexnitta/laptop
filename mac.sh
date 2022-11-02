@@ -113,41 +113,11 @@ brew "coreutils"
 
 EOF
 
-fancy_echo "Configuring asdf version manager ..."
-if [ ! -d "$HOME/.asdf" ]; then
-  brew install asdf
-  append_to_bashrc "source $(brew --prefix asdf)/asdf.sh" 1
-fi
+fancy_echo "Installing Volta ..."
+curl https://get.volta.sh | bash
 
-alias install_asdf_plugin=add_or_update_asdf_plugin
-add_or_update_asdf_plugin() {
-  local name="$1"
-  local url="$2"
-
-  if ! asdf plugin-list | grep -Fq "$name"; then
-    asdf plugin-add "$name" "$url"
-  else
-    asdf plugin-update "$name"
-  fi
-}
-
-# shellcheck disable=SC1090
-. "$(brew --prefix asdf)/asdf.sh"
-add_or_update_asdf_plugin "nodejs" "https://github.com/asdf-vm/asdf-nodejs.git"
-
-install_asdf_language() {
-  local language="$1"
-  local version
-  version="$(asdf list-all "$language" | grep -v "[a-z]" | tail -1)"
-
-  if ! asdf list "$language" | grep -Fq "$version"; then
-    asdf install "$language" "$version"
-    asdf global "$language" "$version"
-  fi
-}
-
-fancy_echo "Installing latest Node ..."
-install_asdf_language "nodejs"
+fancy_echo "Installing Node ..."
+volta install node
 
 fancy_echo "Setting up dotfiles ..."
 env RCRC=$PWD/dotfiles/rcrc rcup
