@@ -9,7 +9,6 @@ brew tap hashicorp/tap
 brew install --cask bitwarden
 brew install --cask docker
 brew install --cask dropbox
-brew install --cask fig
 brew install --cask firefox
 brew install --cask firefox-developer-edition
 brew install --cask google-chrome

@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.pre.bash"
 # ~/.bash_profile
 
 [[ -s ~/.bashrc ]] && source ~/.bashrc
@@ -68,6 +66,3 @@ if [ -f '/Users/alexnitta/google-cloud-sdk/path.bash.inc' ]; then . '/Users/alex
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/alexnitta/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/alexnitta/google-cloud-sdk/completion.bash.inc'; fi
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"

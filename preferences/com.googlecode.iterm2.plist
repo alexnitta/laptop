@@ -4,12 +4,16 @@
 <dict>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>ConvertDosNewlines</key>
+	<true/>
 	<key>Default Arrangement Name</key>
 	<string>Storybox</string>
 	<key>Default Bookmark Guid</key>
 	<string>F887F0C1-8599-4071-B6FF-A8893FBA117F</string>
 	<key>EnableAPIServer</key>
 	<true/>
+	<key>EscapeShellCharsWithBackslash</key>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -648,6 +652,12 @@
 		</dict>
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
