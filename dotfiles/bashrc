@@ -11,3 +11,6 @@ export PATH="$PNPM_HOME:$PATH"
 export VOLTA_HOME="/Users/alexnitta/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 # volta end
+
+# direnv
+eval "$(direnv hook bash)"
