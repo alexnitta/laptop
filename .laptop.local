@@ -18,6 +18,7 @@ brew install --cask gpg-suite-no-mail
 brew install --cask inkscape
 brew install --cask insomnia
 brew install --cask p4v
+brew install --cask polypane
 brew install --cask slack
 brew install --cask spotify
 brew install --cask visual-studio-code
